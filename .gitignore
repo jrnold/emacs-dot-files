@@ -1,0 +1,10 @@
+/elpa/
+/.smex-items
+/places
+/abbrev_defs
+/url/cookies
+session.*
+customization.el
+/local/*
+/tramp
+
