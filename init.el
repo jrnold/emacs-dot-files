@@ -38,7 +38,8 @@
         "init-tramp"
         "init-w3m"
         "init-yasnippet"
-	"init-langtool"))
+	"init-langtool"
+	"init-ispell"))
 (mapc 'load-library init-libraries)
 
 ;; Load customization

@@ -22,9 +22,16 @@
 ;; no more fancy comments
 (setq ess-fancy-comments nil)
 
+(add-hook 'Rnw-mode-hook 
+	  (lambda () (setq ispell-parser 'tex)))
+
 (defun r-scratch (buffer)
   "Open a buffer to do R work in"
   (interactive "BBuffer name: ")
   (let ((buffer-or-name (or buffer "*R-scratch*")))
     (switch-to-buffer buffer-or-name)
     (r-mode)))
+
+;; Update ispell-latex to ignore Rnw
+;; TODO
+
