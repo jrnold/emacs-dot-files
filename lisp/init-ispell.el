@@ -24,12 +24,5 @@
 	 ("program"		. "\\\\end[ \t\n]*{[ \t\n]*program[ \t\n]*}")
 	 ("verbatim\\*?"	. "\\\\end[ \t\n]*{[ \t\n]*verbatim\\*?[ \t\n]*}")
 	 )
-)
-  "Lists of regions to be skipped in TeX mode.
-First list is used raw.
-Second list has key placed inside \\begin{}.
-
-Delete or add any regions you want to be automatically selected
-for skipping in latex mode.")
-
+	))
 

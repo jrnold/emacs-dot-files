@@ -19,6 +19,8 @@
 (global-unset-key (kbd "C-+"))
 ;; text-scale-decrease
 (global-unset-key (kbd "C--"))
+;; I too often accidentally try to send mail
+(global-unset-key (kbd "C-x m"))
 
 ;; aliases
 (defalias 'qrr 'query-replace-regexp)
@@ -28,3 +30,4 @@
        (delq (rassq 'doc-view-mode auto-mode-alist) auto-mode-alist))
 
 (global-auto-revert-mode 1)
+
