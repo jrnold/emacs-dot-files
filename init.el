@@ -12,6 +12,7 @@
 (require 'hippie-exp)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
 (defvar my-packages
   '(auctex yaml-mode markdown-mode yasnippet langtool)
@@ -32,7 +33,6 @@
     (when (not (package-installed-p p))
       (package-install p))))
 
-(package-initialize)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (add-to-list 'load-path "~/.emacs.d/local")
