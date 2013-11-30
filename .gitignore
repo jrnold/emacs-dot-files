@@ -8,3 +8,4 @@ customization.el
 /local/*
 /tramp
 
+/ac-comphist.dat
