@@ -41,6 +41,7 @@
 
 (setq init-libraries 
       '("init-core"
+	"init-auto-complete"
         "init-auctex"
         "init-ess"
         "init-ibuffer"
