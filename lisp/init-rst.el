@@ -2,7 +2,7 @@
 (require 'rst)
 
 (setq reftex-cite-format-rst 
-      '((?\C-m . "[%l]_")))
+      '((?\C-m . "[@%l]_")))
 
 (defun rst-mode-reftex-setup ()
   (interactive)

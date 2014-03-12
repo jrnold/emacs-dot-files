@@ -4,9 +4,13 @@
 ;; The indentation style is from the official R coding standards
 ;; R-core uses C++ http://www.cran.r-project.org/doc/manuals/R-ints.html#R-coding-standards
 ;; hadley uses 2 spaces.
-(add-hook 'ess-mode-hook
+
 	  '(lambda()
-	     (ess-set-style 'C++ 'quiet)
+	     (setq ess-indent-level 2
+		   ess-continued-statement-offset 2
+		   ess-
+	     
+	     
 	     ;; Because
 	     ;;                                 DEF GNU BSD K&R C++
 	     ;; ess-indent-level                  2   2   8   5   4

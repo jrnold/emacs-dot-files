@@ -1,4 +1,5 @@
 (require 'tex-site)
+(require 'ac-math)
 
 (setq
  TeX-auto-save t
@@ -39,6 +40,19 @@
   preview-default-option-list '("displaymath" "textmath")
   )
 
+;; auto-complete
+(add-to-list 'ac-modes 'LaTeX-mode)   ; make auto-complete aware of `latex-mode`
+
+(setq ac-math-unicode-in-math-p t)
+(add-hook 'LaTeX-mode-hook
+	  '(lambda () 
+	     (setq ac-sources
+		   (append '(ac-source-math-unicode
+			     ac-source-math-latex
+			     ac-source-latex-commands)
+			   ac-sources))))
+
+
 ;; Add orgtbl minor mode : http://orgmode.org/manual/Orgtbl-mode.html#Orgtbl-mode
 (add-hook 'LaTeX-mode-hook
 	  '(lambda ()
@@ -61,3 +75,4 @@
                         "--pdf"))))
      (add-to-list 'TeX-command-list
 		  '("Rubber" "rubber %(RubberPDF) %t" TeX-run-shell nil t) t)))
+
