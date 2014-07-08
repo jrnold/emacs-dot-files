@@ -45,5 +45,3 @@
 (depends-on "stan-mode")
 (depends-on "stan-snippets")
 
-;; ;; compile files for faster loading
-(files ("*.el" ("lisp" "*.el")))
