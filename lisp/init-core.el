@@ -1,4 +1,5 @@
-(load-theme 'solarized-light t)
+(require 'color-theme-sanityinc-solarized)
+(load-theme 'sanityinc-solarized-light t)
 
 (global-linum-mode)
 (setq fill-column 80)

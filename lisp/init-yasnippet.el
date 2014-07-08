@@ -1,3 +1,4 @@
+(require 'yasnippet)
 (yas-global-mode 1)
 (setq auto-mode-alist 
       (append (list

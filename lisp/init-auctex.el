@@ -12,7 +12,7 @@
  TeX-debug-warnings t
  TeX-electric-escape t
  TeX-electric-sub-and-superscript t
- TeX-file-extensions '("Snw" "Rnw" "Rtex" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo" "tikz")
+ TeX-file-extensions '("tex" "sty" "cls" "ltx" "texi" "texinfo" "tikz")
  ;; Correlate source
  TeX-source-correlate-method (quote synctex)
  TeX-source-correlate-mode t

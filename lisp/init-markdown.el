@@ -15,10 +15,9 @@
       markdown-enable-math t)
 
 (defun my-markdown-mode-hook()
-  (local-set-key
-   (define-key markdown-mode-map "\C-c["
+  (define-key markdown-mode-map "\C-c["
     (lambda ()
-      (nteractive)
+      (interactive)
       (let ((reftex-cite-format reftex-cite-format-markdown))
 	(reftex-citation)))))
 

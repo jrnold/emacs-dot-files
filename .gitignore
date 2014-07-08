@@ -10,3 +10,4 @@ customization.el
 
 /ac-comphist.dat
 /image-dired/.image-dired_db
+/.cask/

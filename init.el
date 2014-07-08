@@ -1,44 +1,18 @@
 ;; .emacs.el
 ;; Global emacs init file
 
-;; Initial
-(require 'cl)
-
-(setq user-local-dir "~/.emacs.d/local")
-
-;; Load ELPA packages
-(require 'hippie-exp)
-(require 'package)
-(require 'hippie-exp)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-
-(defvar my-packages
-  '(auctex yaml-mode markdown-mode yasnippet langtool)
-  "A list of packages to ensure are installed at launch.")
-
-(defun my-packages-installed-p ()
-  (loop for p in my-packages
-        when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
-
-(unless (my-packages-installed-p)
-  ;; check for new packages (package versions)
-  (message "%s" "Refreshing its package database...")
-  (package-refresh-contents)
-  (message "%s" " done.")
-  ;; install the missing packages
-  (dolist (p my-packages)
-    (when (not (package-installed-p p))
-      (package-install p))))
-
-
+;; directory with local files
+(defvar user-local-dir "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/local")
+(add-to-list 'load-path user-local-dir)
 
-(load-library "init-local-config")
+;; Load Packages
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+(require 'pallet)
 
+;; load stuff
+(load "init-local-config" t)
 (setq init-libraries 
       '("init-core"
 	"init-auto-complete"
@@ -60,9 +34,10 @@
 	"init-langtool"
 	"init-ispell"
 	"init-stan"))
-(mapc 'load-library init-libraries)
+(mapc 'load init-libraries)
 
 ;; Load customization
 (setq custom-file "~/.emacs.d/customization.el")
 (if (file-exists-p custom-file)
     (load custom-file))
+(put 'erase-buffer 'disabled nil)
