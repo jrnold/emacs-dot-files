@@ -7,7 +7,6 @@ session.*
 customization.el
 /local/*
 /tramp
-
 /ac-comphist.dat
-/image-dired/.image-dired_db
+/image-dired/
 /.cask/
