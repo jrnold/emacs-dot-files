@@ -7,7 +7,6 @@
 (depends-on "auto-complete")
 (depends-on "bind-key")
 (depends-on "cask")
-(depends-on "color-theme-sanityinc-solarized")
 (depends-on "dash")
 (depends-on "drag-stuff")
 (depends-on "ess")
