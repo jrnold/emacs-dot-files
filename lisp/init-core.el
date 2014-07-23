@@ -1,4 +1,3 @@
-(require 'color-theme-solarized)
 (load-theme 'solarized-light t)
 
 (global-linum-mode)
