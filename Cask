@@ -1,4 +1,3 @@
-;; -*- mode: emacs-lisp -*-
 (source gnu)
 (source melpa)
 
@@ -44,6 +43,3 @@
 (depends-on "color-theme-solarized"
 	    :git "git@github.com:jrnold/emacs-color-theme-solarized.git"
 	    :branch "master")
-
-
-

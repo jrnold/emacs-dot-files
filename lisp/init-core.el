@@ -1,3 +1,4 @@
+(require 'color-theme-solarized)
 (defvar color-theme-light 'solarized-light)
 (defvar color-theme-dark 'solarized-dark)
 (defvar color-theme-default color-theme-light)

@@ -2,7 +2,7 @@
 
 (setq
  ;; python-shell-interpreter "ipython"
- python-shell-interpreter "ipython3"
+ python-shell-interpreter "ipython"
  python-shell-interpreter-args ""
  python-shell-prompt-regexp "In \\[[0-9]+\\]: "
  python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
