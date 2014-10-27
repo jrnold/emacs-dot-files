@@ -15,6 +15,8 @@
 (load "init-local-config" t)
 (setq init-libraries 
       '("init-core"
+	"init-font"
+	"init-color-theme"
 	"init-auto-complete"
         "init-auctex"
         "init-ess"
