@@ -12,3 +12,4 @@ customization.el
 /.cask/
 /auto-save-list/
 *~
+*.elc
