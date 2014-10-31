@@ -31,7 +31,6 @@
         "init-rst"
         "init-sql"
         "init-tramp"
-        "init-w3m"
         "init-yasnippet"
 	"init-langtool"
 	"init-ispell"
