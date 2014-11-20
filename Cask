@@ -6,9 +6,10 @@
 (depends-on "auto-complete")
 (depends-on "bind-key")
 (depends-on "cask")
+(depends-on "cdlatex")
+(depends-on "color-theme-solarized")
 (depends-on "dash")
 (depends-on "drag-stuff")
-(depends-on "ess")
 (depends-on "ess")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
@@ -18,9 +19,7 @@
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
 (depends-on "langtool")
-(depends-on "langtool")
 (depends-on "magit")
-(depends-on "markdown-mode")
 (depends-on "markdown-mode")
 (depends-on "markdown-mode+")
 (depends-on "multiple-cursors")
@@ -39,7 +38,3 @@
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
-
-(depends-on "color-theme-solarized"
-	    :git "git@github.com:jrnold/emacs-color-theme-solarized.git"
-	    :branch "master")
