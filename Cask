@@ -14,7 +14,6 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
-(depends-on "flycheck")
 (depends-on "flycheck-cask")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
@@ -53,10 +52,10 @@
 	  "stan-snippets/snippets/stan-mode/.yas-make-groups"
 	  "stan-snippets/snippets/stan-mode/.yas-parents")))
 
-(depends-on "flycheck-stan"
- :git "git@github.com:stan-dev/stan-mode.git"
- :branch "develop"
- :files ("flycheck-stan/*.el"))
+;; (depends-on "flycheck-stan"
+;;  :git "git@github.com:stan-dev/stan-mode.git"
+;;  :branch "develop"
+;;  :files ("flycheck-stan/*.el"))
 
 (depends-on "ac-stan"
  :git "git@github.com:stan-dev/stan-mode.git"
