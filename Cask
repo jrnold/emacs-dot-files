@@ -47,7 +47,8 @@
  :git "git@github.com:stan-dev/stan-mode.git"
  :branch "develop"
  :files ("stan-snippets/*el" 
-	 ("stan-snippets/snippets/stan-mode/"
+	 ("snippets/stan-mode/"
+	  "stan-snippets/snippets/stan-mode/"
 	  "stan-snippets/snippets/stan-mode/.yas-compiled-snippets.el"
 	  "stan-snippets/snippets/stan-mode/.yas-make-groups"
 	  "stan-snippets/snippets/stan-mode/.yas-parents")))
