@@ -14,6 +14,7 @@
 (depends-on "expand-region")
 (depends-on "f")
 (depends-on "flycheck")
+(depends-on "flycheck")
 (depends-on "flycheck-cask")
 (depends-on "htmlize")
 (depends-on "idle-highlight-mode")
@@ -62,3 +63,4 @@
  :files ("ac-stan/*.el" "ac-stan/ac-dict"))
  
 (depends-on "color-theme-solarized")
+
