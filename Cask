@@ -52,10 +52,10 @@
 	  "stan-snippets/snippets/stan-mode/.yas-make-groups"
 	  "stan-snippets/snippets/stan-mode/.yas-parents")))
 
-;; (depends-on "flycheck-stan"
-;;  :git "git@github.com:stan-dev/stan-mode.git"
-;;  :branch "develop"
-;;  :files ("flycheck-stan/*.el"))
+(depends-on "flycheck-stan"
+ :git "git@github.com:stan-dev/stan-mode.git"
+ :branch "flycheck-stan"
+ :files ("flycheck-stan/*.el"))
 
 (depends-on "ac-stan"
  :git "git@github.com:stan-dev/stan-mode.git"
