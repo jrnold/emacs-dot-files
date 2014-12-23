@@ -17,6 +17,7 @@
       '("init-core"
 	"init-emacs-lisp"
 	"init-font"
+	"init-flycheck"
 	"init-color-theme"
 	"init-auto-complete"
         "init-auctex"

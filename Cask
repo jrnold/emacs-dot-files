@@ -35,6 +35,8 @@
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
+(depends-on "company")
+(depends-on "company-math")
 
 ;; Load these from my github
 (depends-on "stan-mode"
