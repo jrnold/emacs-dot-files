@@ -31,6 +31,7 @@
 (depends-on "s")
 (depends-on "smartparens")
 (depends-on "smex")
+(depends-on "solarized-theme")
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yaml-mode")
@@ -64,5 +65,3 @@
  :branch "develop"
  :files ("ac-stan/*.el" "ac-stan/ac-dict"))
  
-(depends-on "color-theme-solarized")
-
