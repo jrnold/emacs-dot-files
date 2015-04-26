@@ -1,4 +1,5 @@
 (require 'markdown-mode)
+(require 'cl)
 (require 'pandoc-mode)
 
 (setq reftex-cite-format-markdown
