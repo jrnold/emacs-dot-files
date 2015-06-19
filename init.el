@@ -7,6 +7,8 @@
 (add-to-list 'load-path user-local-dir)
 
 ;; Load Packages
+;; do not install cask via homebrew or need to alter next line
+
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
