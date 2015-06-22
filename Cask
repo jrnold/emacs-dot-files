@@ -38,6 +38,7 @@
 (depends-on "yasnippet")
 (depends-on "company")
 (depends-on "company-math")
+(depends-on "exec-path-from-shell")
 
 ;; ;; Load these from my github
 ;; (depends-on "stan-mode"

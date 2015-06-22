@@ -13,9 +13,13 @@
 (cask-initialize)
 (require 'pallet)
 
+;; ensure that the PATH is set
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; load stuff
 (load "init-local-config" t)
-(setq init-libraries 
+!(setq init-libraries 
       '("init-core"
 	"init-emacs-lisp"
 	"init-font"
