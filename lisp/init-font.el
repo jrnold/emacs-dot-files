@@ -9,8 +9,10 @@
 
 (defvar default-font-list 
   '("InputMonoLight-10"
+    "SourceCodePro-10",
     "Incosolata-11"
-    "DejaVuSansMono-10")
+    "DejaVuSansMono-10"
+    "Menlo-10")
   "List of default fonts to try to use")
   
 (set-default-font (font-candidate default-font-list) t)
