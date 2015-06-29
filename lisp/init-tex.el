@@ -1,5 +1,5 @@
 (require 'tex-site)
-(require 'ac-math)
+(require 'company-math)
 
 (setq
  TeX-auto-save t
@@ -41,16 +41,16 @@
   )
 
 ;; auto-complete
-(add-to-list 'ac-modes 'LaTeX-mode)   ; make auto-complete aware of `latex-mode`
+;; (add-to-list 'ac-modes 'LaTeX-mode)   ; make auto-complete aware of `latex-mode`
 
-(setq ac-math-unicode-in-math-p t)
-(add-hook 'LaTeX-mode-hook
-	  '(lambda () 
-	     (setq ac-sources
-		   (append '(ac-source-math-unicode
-			     ac-source-math-latex
-			     ac-source-latex-commands)
-			   ac-sources))))
+;; (setq ac-math-unicode-in-math-p t)
+;; (add-hook 'LaTeX-mode-hook
+;; 	  '(lambda () 
+;; 	     (setq ac-sources
+;; 		   (append '(ac-source-math-unicode
+;; 			     ac-source-math-latex
+;; 			     ac-source-latex-commands)
+;; 			   ac-sources))))
 
 
 ;; Add orgtbl minor mode : http://orgmode.org/manual/Orgtbl-mode.html#Orgtbl-mode
@@ -61,6 +61,10 @@
 	     (turn-on-orgtbl)
 	     (TeX-source-correlate-mode)
              (LaTeX-math-mode)
+	     (setq-local company-backends
+			 (append '(company-math-symbols-latex company-latex-commands)
+				 company-backends)
+			 )
              ))
 
 ;; Author: TiagoCmargo, http://www.emacswiki.org/emacs/LaTeX

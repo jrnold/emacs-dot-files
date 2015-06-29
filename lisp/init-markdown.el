@@ -20,6 +20,16 @@
     (lambda ()
       (interactive)
       (let ((reftex-cite-format reftex-cite-format-markdown))
-	(reftex-citation)))))
+	(reftex-citation))))
+  (setq-local
+   company-backends
+   (append '(company-math-symbols-latex)
+	   company-backends)
+   company-math-allow-latex-symbols-in-faces t
+   company-math-disallow-latex-symbols-in-faces nil
+   company-math-allow-unicode-symbols-in-faces t   
+   company-math-disallow-unicode-symbols-in-faces nil
+   )
+  )
 
 (add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
