@@ -1,5 +1,10 @@
+;;  -*- no-byte-compile: t -*-
+;; 
 ;; .emacs.el
+;;
 ;; Global emacs init file
+
+
 
 ;; directory with local files
 (defvar user-local-dir "~/.emacs.d/local")
@@ -12,6 +17,12 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 (require 'pallet)
+
+;;; Autocompile files
+(setq load-prefer-newer t)
+(require 'auto-compile)
+(auto-compile-on-load-mode 1)
+(auto-compile-on-save-mode 1)
 
 ;; ensure that the PATH is set
 (when (memq window-system '(mac ns))

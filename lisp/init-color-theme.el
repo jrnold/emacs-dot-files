@@ -56,3 +56,5 @@
 	(setq color-theme-dark-loadedp nil))
     (load-theme color-theme-dark)
     (setq color-theme-dark-loadedp t)))
+
+(provide 'init-color-theme)
