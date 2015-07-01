@@ -1,31 +1,27 @@
 (require 'tex-site)
 (require 'company-math)
 
+
+;; Automatically parse 
 (setq
  TeX-auto-save t
- TeX-parse-self t
- ;; Always prompt for master
- TeX-master nil
- TeX-source-correlate-method 'synctex
- ;; LaTeX-command-style (quote (("" "%(PDF)%(latex) -file-line-error %S%(PDFout)"))))
+ TeX-parse-self t)
+
+ ;; Always prompt for master document
+(setq  TeX-master nil)
+
+;; Use synctex for correlating with source
+(setq TeX-source-correlate-method 'synctex
+      TeX-source-correlate-mode t
+      TeX-source-correlate-start-server t)
+
+;; Misc settings
+(setq
  TeX-debug-bad-boxes t
  TeX-debug-warnings t
  TeX-electric-escape t
  TeX-electric-sub-and-superscript t
  TeX-file-extensions '("tex" "sty" "cls" "ltx" "texi" "texinfo" "tikz")
- ;; Correlate source
- TeX-source-correlate-method (quote synctex)
- TeX-source-correlate-mode t
- TeX-source-correlate-start-server t
- ;; Viewer Programs
- TeX-view-program-list 
- '(("Okular" "okular --unique %o#src:%n\"`pwd`/./%b\"")
-   ("Evince" "evince --page-index=%(outpage) %o"))
- TeX-view-program-selection  (quote ((output-pdf "Okular") 
-                                     (output-html "xdg-open")
-                                     (output-dvi "Okular") 
-                                     ))
- 
  TeX-style-private '("~/.emacs.d/style")
  )
 
@@ -37,8 +33,7 @@
   (quote
    ;; need to remove -dSAFER
    ("-q" "-dNOPAUSE" "-DNOPLATFONTS" "-dPrinted" "-dTextAlphaBits=4" "-dGraphicsAlphaBits=4"))
-  preview-default-option-list '("displaymath" "textmath")
-  )
+  preview-default-option-list '("displaymath" "textmath"))
 
 ;; auto-complete
 ;; (add-to-list 'ac-modes 'LaTeX-mode)   ; make auto-complete aware of `latex-mode`
@@ -79,4 +74,36 @@
                         "--pdf"))))
      (add-to-list 'TeX-command-list
 		  '("Rubber" "rubber %(RubberPDF) %t" TeX-run-shell nil t) t)))
+
+
+ (defun TeX-run-Biber (name command file)
+    "Create a process for NAME using COMMAND to format FILE with Biber." 
+   (let ((process (TeX-run-command name command file)))
+      (setq TeX-sentinel-function 'TeX-Biber-sentinel)
+      (if TeX-process-asynchronous
+          process
+        (TeX-synchronous-sentinel name file process))))
+  
+  (defun TeX-Biber-sentinel (process name)
+    "Cleanup TeX output buffer after running Biber."
+    (goto-char (point-max))
+    (cond
+     ;; Check whether Biber reports any warnings or errors.
+     ((re-search-backward (concat
+                           "^(There \\(?:was\\|were\\) \\([0-9]+\\) "
+                           "\\(warnings?\\|error messages?\\))") nil t)
+      ;; Tell the user their number so that she sees whether the
+      ;; situation is getting better or worse.
+      (message (concat "Biber finished with %s %s. "
+                       "Type `%s' to display output.")
+               (match-string 1) (match-string 2)
+               (substitute-command-keys
+                "\\\\[TeX-recenter-output-buffer]")))
+     (t
+      (message (concat "Biber finished successfully. "
+                       "Run LaTeX again to get citations right."))))
+    (setq TeX-command-next TeX-command-default))
+
+(eval-after-load "tex"
+  '(add-to-list 'TeX-command-list '("Biber" "biber %s" TeX-run-Biber nil t :help "Run Biber")))
 

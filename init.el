@@ -5,7 +5,6 @@
 ;; Global emacs init file
 
 
-
 ;; directory with local files
 (defvar user-local-dir "~/.emacs.d/local")
 (add-to-list 'load-path "~/.emacs.d/lisp")
@@ -21,8 +20,8 @@
 ;;; Autocompile files
 (setq load-prefer-newer t)
 (require 'auto-compile)
-(auto-compile-on-load-mode 1)
-(auto-compile-on-save-mode 1)
+(auto-compile-on-load-mode t)
+(auto-compile-on-save-mode t)
 
 ;; ensure that the PATH is set
 (when (memq window-system '(mac ns))
