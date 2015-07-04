@@ -2,4 +2,4 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-g(provide 'init-auto-complete)
+(provide 'init-auto-complete)
