@@ -60,7 +60,8 @@
         "init-yasnippet"
 	"init-langtool"
 	"init-ispell"
-	"init-stan"))
+	"init-stan"
+        "init-dired"))
 (mapc 'load init-libraries)
 
 (defun init-reload ()
