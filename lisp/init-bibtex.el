@@ -12,3 +12,5 @@
  bibtex-autokey-name-year-separator ""
  bibtex-autokey-year-title-separator ""
  bibtex-maintain-sorted-entries t)
+
+(provide 'init-bibtex)
