@@ -38,6 +38,8 @@
 (depends-on "yasnippet")
 (depends-on "company")
 (depends-on "company-math")
+(depends-on "docker")
+(depends-on "docker-tramp")
 
 ;; Load these from my github
 (depends-on "stan-mode"
