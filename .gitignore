@@ -15,3 +15,5 @@ customization.el
 *.elc
 /recentf
 /ido.last
+\#*#
+.#*
