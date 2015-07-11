@@ -13,4 +13,5 @@ customization.el
 /auto-save-list/
 *~
 *.elc
+/recentf
 /ido.last
