@@ -11,9 +11,9 @@ customization.el
 /image-dired/
 /.cask/
 /auto-save-list/
-*~
-*.elc
 /recentf
 /ido.last
+*~
+*.elc
 \#*#
 .#*

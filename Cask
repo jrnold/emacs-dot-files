@@ -40,6 +40,7 @@
 (depends-on "company-math")
 (depends-on "docker")
 (depends-on "docker-tramp")
+(depends-on "dockerfile-mode")
 (depends-on "exec-path-from-shell")
 
 ;; Load these from my github
