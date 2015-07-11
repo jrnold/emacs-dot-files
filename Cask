@@ -41,20 +41,20 @@
 (depends-on "exec-path-from-shell")
 
 ;; ;; Load these from my github
-;; (depends-on "stan-mode"
-;;  :git "git@github.com:stan-dev/stan-mode.git"
-;;  :branch "develop"
-;;  :files ("stan-mode/*.el"))
+(depends-on "stan-mode"
+ :git "git@github.com:stan-dev/stan-mode.git"
+ :branch "master"
+ :files ("stan-mode/*.el"))
 
-;; (depends-on "stan-snippets"
-;;  :git "git@github.com:stan-dev/stan-mode.git"
-;;  :branch "develop"
-;;  :files ("stan-snippets/*el" 
-;; 	 ("snippets/stan-mode/"
-;; 	  "stan-snippets/snippets/stan-mode/"
-;; 	  "stan-snippets/snippets/stan-mode/.yas-compiled-snippets.el"
-;; 	  "stan-snippets/snippets/stan-mode/.yas-make-groups"
-;; 	  "stan-snippets/snippets/stan-mode/.yas-parents")))
+(depends-on "stan-snippets"
+ :git "git@github.com:stan-dev/stan-mode.git"
+ :branch "master"
+ :files ("stan-snippets/*el" 
+	 ("snippets/stan-mode/"
+	  "stan-snippets/snippets/stan-mode/"
+	  "stan-snippets/snippets/stan-mode/.yas-compiled-snippets.el"
+	  "stan-snippets/snippets/stan-mode/.yas-make-groups"
+	  "stan-snippets/snippets/stan-mode/.yas-parents")))
 
 ;; (depends-on "flycheck-stan"
 ;;  :git "git@github.com:stan-dev/stan-mode.git"
@@ -65,7 +65,4 @@
 ;;  :git "git@github.com:stan-dev/stan-mode.git"
 ;;  :branch "develop"
 ;;  :files ("ac-stan/*.el" "ac-stan/ac-dict"))
- 
-(depends-on "stan-mode")
-(depends-on "stan-snippets")
 
