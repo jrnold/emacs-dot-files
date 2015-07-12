@@ -1,6 +1,7 @@
 (require 'ess-site)
 (require 'ess-help)
 
+
 ;; The indentation style is from the official R coding standards
 ;; R-core uses C++ http://www.cran.r-project.org/doc/manuals/R-ints.html#R-coding-standards
 ;; hadley uses 2 spaces.
@@ -18,11 +19,15 @@
 	    (setq ess-indent-level 2
 		  tab-width 2)))
 
+(add-to-list 'auto-mode-alist '("\\.Rprofile\\'" . R-mode))
+
 ;; No more _ to <-
 (ess-toggle-underscore nil)
 
 ;; no more fancy comments
 (setq ess-fancy-comments nil)
+
+(add-to-list 'auto-mode-alist '("\\.Rprofile\\'" . R-mode))
 
 (add-hook 'Rnw-mode-hook 
 	  (lambda () (setq ispell-parser 'tex)))
