@@ -2,7 +2,7 @@
 ;;; Commentary:
 ;;; Code:
 (require 'markdown-mode)
-(require 'pandoc-mode)
+;; (require 'pandoc-mode)
 (require 'company)
 (require 'company-math)
 (require 'reftex)

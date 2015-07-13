@@ -3,13 +3,20 @@
 
 (depends-on "ac-math")
 (depends-on "auctex")
+(depends-on "auto-compile")
 (depends-on "auto-complete")
 (depends-on "bind-key")
 (depends-on "cask")
 (depends-on "cdlatex")
+(depends-on "company")
+(depends-on "company-math")
 (depends-on "dash")
+(depends-on "docker")
+(depends-on "docker-tramp")
+(depends-on "dockerfile-mode")
 (depends-on "drag-stuff")
 (depends-on "ess")
+(depends-on "exec-path-from-shell")
 (depends-on "exec-path-from-shell")
 (depends-on "expand-region")
 (depends-on "f")
@@ -36,12 +43,6 @@
 (depends-on "web-mode")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
-(depends-on "company")
-(depends-on "company-math")
-(depends-on "docker")
-(depends-on "docker-tramp")
-(depends-on "dockerfile-mode")
-(depends-on "exec-path-from-shell")
 
 ;; Load these from my github
 (depends-on "stan-mode"

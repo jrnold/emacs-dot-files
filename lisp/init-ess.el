@@ -18,11 +18,18 @@
 	    (setq ess-indent-level 2
 		  tab-width 2)))
 
+(add-to-list 'auto-mode-alist '("\\.Rprofile\\'" . R-mode))
+
 ;; No more _ to <-
 (ess-toggle-underscore nil)
 
 ;; no more fancy comments
 (setq ess-fancy-comments nil)
+
+;; Make TeX and RefTex aware of Snw and Rnw files
+(add-to-list 'reftex-file-extensions
+	     (nconc (assoc "tex" reftex-file-extensions) '(".Rnw")))
+(setq TeX-file-extensions (nconc TeX-file-extensions '("Rnw"))
 
 (add-hook 'Rnw-mode-hook 
 	  (lambda () (setq ispell-parser 'tex)))
@@ -30,3 +37,4 @@
 ;; Update ispell-latex to ignore Rnw
 ;; TODO
 
+(provide 'init-ess)
