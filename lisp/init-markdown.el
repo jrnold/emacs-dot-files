@@ -25,6 +25,8 @@
 (setq markdown-enable-math t)
 
 
+
+
 (defun my-markdown-mode-hook()
   (define-key markdown-mode-map "\C-c["
     (lambda ()
@@ -33,8 +35,7 @@
 	(reftex-citation))))
   (setq-local
    company-backends
-   (append '(company-math-symbols-latex)
-	   company-backends))
+   (append '(company-math-symbols-latex) company-backends))
    (setq-local company-math-allow-latex-symbols-in-faces t)
    (setq-local company-math-disallow-latex-symbols-in-faces nil)
    (setq-local company-math-allow-unicode-symbols-in-faces t)
