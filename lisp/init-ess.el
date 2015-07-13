@@ -27,10 +27,9 @@
 (setq ess-fancy-comments nil)
 
 ;; Make TeX and RefTex aware of Snw and Rnw files
-(setq reftex-file-extensions
-      '(("Snw" "Rnw" "nw" "tex" ".tex" ".ltx") ("bib" ".bib")))
-(setq TeX-file-extensions
-      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
+(add-to-list 'reftex-file-extensions
+	     (nconc (assoc "tex" reftex-file-extensions) '(".Rnw")))
+(setq TeX-file-extensions (nconc TeX-file-extensions '("Rnw"))
 
 (add-hook 'Rnw-mode-hook 
 	  (lambda () (setq ispell-parser 'tex)))
