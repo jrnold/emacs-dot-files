@@ -1,7 +1,6 @@
 (require 'ess-site)
 (require 'ess-help)
 
-
 ;; The indentation style is from the official R coding standards
 ;; R-core uses C++ http://www.cran.r-project.org/doc/manuals/R-ints.html#R-coding-standards
 ;; hadley uses 2 spaces.
@@ -27,7 +26,11 @@
 ;; no more fancy comments
 (setq ess-fancy-comments nil)
 
-(add-to-list 'auto-mode-alist '("\\.Rprofile\\'" . R-mode))
+;; Make TeX and RefTex aware of Snw and Rnw files
+(setq reftex-file-extensions
+      '(("Snw" "Rnw" "nw" "tex" ".tex" ".ltx") ("bib" ".bib")))
+(setq TeX-file-extensions
+      '("Snw" "Rnw" "nw" "tex" "sty" "cls" "ltx" "texi" "texinfo"))
 
 (add-hook 'Rnw-mode-hook 
 	  (lambda () (setq ispell-parser 'tex)))
@@ -35,3 +38,4 @@
 ;; Update ispell-latex to ignore Rnw
 ;; TODO
 
+(provide 'init-ess)
