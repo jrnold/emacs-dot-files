@@ -61,6 +61,7 @@
 	"init-langtool"
 	"init-ispell"
 	"init-stan"
+	"init-polymode"
         "init-dired"))
 (mapc 'load init-libraries)
 

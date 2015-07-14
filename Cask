@@ -32,6 +32,7 @@
 (depends-on "nyan-mode")
 (depends-on "pallet")
 (depends-on "pandoc-mode")
+(depends-on "polymode")
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
