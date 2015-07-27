@@ -14,10 +14,10 @@
 (require 'pallet)
 
 ;;; Autocompile files
-(setq load-prefer-newer t)
-(require 'auto-compile)
-(auto-compile-on-load-mode t)
-(auto-compile-on-save-mode t)
+;; (setq load-prefer-newer t)
+;; (require 'auto-compile)
+;; (auto-compile-on-load-mode t)
+;; (auto-compile-on-save-mode t)
 
 ;; Add paths for directories with init files
 (defvar init-local-dir
