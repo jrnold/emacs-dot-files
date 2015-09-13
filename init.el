@@ -57,12 +57,13 @@
         "init-rst"
         "init-sql"
         "init-tramp"
+	"init-stan"
         "init-yasnippet"
 	"init-langtool"
 	"init-ispell"
-	"init-stan"
 	"init-polymode"
-        "init-dired"))
+        "init-dired"
+        "init-occur"))
 (mapc 'load init-libraries)
 
 (defun init-reload ()

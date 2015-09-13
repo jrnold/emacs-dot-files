@@ -1,4 +1,8 @@
-(setq ispell-program-name "hunspell")
+(setq ispell-program-name (executable-find "hunspell")
+      ispell-really-hunspell t)
+
+(setenv "DICTIONARY" "en_US")
+
 
 (setq ispell-tex-skip-alists
       '((;;("%\\[" . "%\\]") ; AMStex block comment...
