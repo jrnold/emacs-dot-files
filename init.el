@@ -6,7 +6,6 @@
 ;; Global emacs init file
 
 ;;; Code:
-
 (defvar cask-file "~/.cask/cask.el"
   "Path to cask.el.")
 (require 'cask cask-file)
@@ -61,7 +60,6 @@
         "init-yasnippet"
 	"init-langtool"
 	"init-ispell"
-	"init-polymode"
         "init-dired"
         "init-occur"))
 (mapc 'load init-libraries)
